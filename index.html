@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MiNuevaApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="menu container">
+      <input type="checkbox" id="menu"/>
+      <label for="menu">Menu</label>
+      <input type="checkbox" id="menu"/>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Lista de Articulos</a></li>
+          <li><a href="#">Lista de articulos-Filtro</a></li>
+          <li><a href="#">Articulos filtrados</a></li>
+          <li><a href="#">Detalle de producto</a></li>
+          <li><a href="#">Detalle de producto</a></li>
+          <li><a href="#">Carrito de compra</a></li>
+          <li><a href="#">Carrito de compra 2</a></li>
+          <li><a href="#">Carrito de compra 3</a></li>
+        </ul>
+      </nav>
+      <div>
+        <ul>
+          <li class="Lista de Articulos">
+            <header>Mi catalogo en linea</header>
+            <div id="lista">
+              <input type="button" id="Ver categorias de articulos"/>
+              <li>fetch('https://fakestoreapi.com/products')
+                .then(res=>res.json())
+                .then(json=>console.log(json))
+              </li>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li class="Lista de articulos-Filtro">
+            <header>Mi catalogo en linea</header>
+            <div id="lista">
+              <input type="checkbox" id="Ver categorias de articulos"/>
+              <li>fetch('https://fakestoreapi.com/products/categories')
+                .then(res=>res.json())
+                .then(json=>console.log(json))
+              </li>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li class="Articulos filtrados">
+            <header>Mi catalogo en linea</header>
+            <div id="lista">
+              <input type="checkbox" id="Joyeria"/>
+              <li>fetch("https://fakestoreapi.com/products/category/jewelery")
+                .then(res=>res.json())
+                .then(json=>console.log(json))
+              </li>
+              <input type="checkbox" id="Electronica"/>
+              <li>fetch("https://fakestoreapi.com/products/category/electronics")
+                .then(res=>res.json())
+                .then(json=>console.log(json))
+              </li>
+              <input type="checkbox" id="Ropa de hombre"/>
+              <li>fetch("https://fakestoreapi.com/products/category/men's%20clotching")
+                .then(res=>res.json())
+                .then(json=>console.log(json))
+              </li>
+              <input type="checkbox" id="Ropa de mujer"/>
+              <li>fetch("https://fakestoreapi.com/products/category/women's%20clotching")
+                .then(res=>res.json())
+                .then(json=>console.log(json))
+              </li>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li class="Detalle de producto">
+            <header>Mi catalogo en linea</header>
+            <li>
+              fetch('https://fakestoreapi.com/products/1')
+              .then(res=>res.json())
+              .then(json=>console.log(json))
+            </li>
+            <li>$ Precio</li>
+            <li><button>Agregar al carrito</button></li>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li class="Detalle de producto">
+            <header>Mi catalogo en linea</header>
+            <li>
+              fetch('https://fakestoreapi.com/products?limit=5')
+              .then(res=>res.json())
+              .then(json=>console.log(json))
+            </li>
+            <li>TOTAL $TOTAL</li>
+            <li><button>Proceder al checkbox</button></li>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li class="Carrito de compra">
+            <header>Mi catalogo en linea</header>
+            <li>Nombre</li>
+            <li><input type="checkbox" id="Nombre"/></li>
+            <li>Direccion(calle/numero)</li>
+            <li><input type="checkbox" id="Direccion(calle/numero)"/></li>
+            <li>
+              fetch('https://fakestoreapi.com/users/1')
+              .then(res=>res.json())
+              .then(json=>console.log(json))
+            </li>
+          </li>
+        </ul>
+        <li>TOTAL $TOTAL</li>
+        <li><button>Ir a pagar</button></li>
+      </div>
+      <div>
+        <ul>
+          <li class="Carrito de compra 2">
+            <header>Mi catalogo en linea</header>
+            <div id="lista">
+              <li>Nombre de tarjeta</li>
+              <li><input type="checkbox" id="Nombre de tarjeta"/></li>
+              <li>Numero de tarjeta</li>
+              <li><input type="checkbox" id="Numero de tarjeta"/></li>
+              <li>Codigo de seguridad</li>
+              <li><input type="checkbox" id="Codigo de seguridad"/></li>
+              <li>Vigencia</li>
+              <li><input type="checkbox" id="Vigencia"/></li>
+            </div>
+          </li>
+        </ul>
+        <li>TOTAL $TOTAL</li>
+        <li><button>Comprar</button></li>
+      </div>
+      <div>
+        <ul>
+          <li class="Carrito de compra 3">
+            <header>Mi catalogo en linea</header>
+            <li>Se completo su compra</li>
+            <li>Nombre de tarjeta</li>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <app-root></app-root>
+</body>
+</html>
